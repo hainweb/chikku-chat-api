@@ -8,7 +8,8 @@ const { app, server } = require('./socket/index')
 
 // const app = express()
 app.use(cors({
-    origin : process.env.FRONTEND_URL,
+    origin : ["https://chikku-chat.vercel.app"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials : true
 }))
 app.use(express.json())
